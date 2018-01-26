@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Employee Details</title>
+<script type="text/javascript">
+function calculate()
+{
+var name=document.getElementById("name").value;
+var eno=document.getElementById("empno").value;
+var basic=parseInt(document.getElementById("besic").value);
+var hra=basic*0.6;
+var da=basic*0.4;
+var gross=basic+da+hra;
+var pf=0.2*basic;
+var tax=0.13*basic;
+var deduction=pf+tax;
+var netsalary=gross-deduction;
+document.write("<h2><b>Emplyee Report</b></h2>");
+document.write("<b> Name :"+name+ "</b><br/><br>");
+document.write("<b> Employee No.:"+eno+ "</b><br/><br>");
+document.write("<b> Basic Salary :"+basic+ "</b><br/><br>");
+document.write("<b> HRA :"+hra+ "</b><br/><br>");
+document.write("<b> DA :"+da+ "</b><br/><br>");
+document.write("<b> Gross Pay :"+gross+ "</b><br/><br>");
+document.write("<b> PF :"+pf+ "</b><br/><br>");
+document.write("<b> Tax:"+tax+ "</b><br/><br>");
+document.write("<b> Deduction:"+deduction+ "</b><br/><br>");
+document.write("<b> Net Salary :"+netsalary+ "</b><br/><br>");
+}
+</script>
+</head>
+<body>
+<table border='5'>
+<tr><th>Employee Detail Table</th></tr>
+<tr><td>Name :</td><td><input type="text" id="name"/></td></tr>
+<tr><td>Employee No. :</td><td><input type="text" id="empno"/></td></tr>
+<tr><td>Basic Salary:</td><td><input type="text" id="besic"/></td></tr>
+</table>
+<br/><input type="button"  value="Get Netsalary" onclick="calculate()"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Image Toggle</title>
+<style type="text/css">
+#image1 {position:absolute; top:100; left:100px; border:thin; visibility:visible;}
+#image2 {position:absolute; top:100; left:100px; border:thin; visibility:hidden;}
+</style>
+<script type="text/javascript">
+function toggle()
+{
+var img1=document.getElementById("image1").style;
+var img2=document.getElementById("image2").style;
+if(img1.visibility=="visible")
+{
+img1.visibility="hidden";
+img2.visibility="visible";
+}
+else
+{
+img1.visibility="visible";
+img2.visibility="hidden";
+}
+}
+</script>
+</head>
+<body>
+<form>
+<img src="D:\anu_pic.jpg" id="image1" heigth="100" width="80" onmouseover="toggle()" onmouseout="toggle()"></img>
+<img src="D:\anu_pic1.jpg" id="image2" heigth="100" width="80" onmouseover="toggle()" onmouseout="toggle()"></img>
+</form>
+</body>
+</html>

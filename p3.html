@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>Validating Mathematical Expression</title>
+<script type="text/javascript">
+function evaluation()
+{
+var expression=document.getElementById("expr").value;
+var rslt=eval(expression);
+document.getElementById("result").value=rslt;
+}
+</script>
+</head>
+<body>
+<form>
+Enter Expression to be Evaluated:<input type="text" id="expr"/>
+<input type="button" value="Evaluate" onclick="evaluation()"/><br/><br/>
+Result :<input type="text" id="result"/><br/><br/>
+
+</form>
+</body>
+</html>

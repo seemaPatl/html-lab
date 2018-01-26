@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Basic Animation</title>
+<style>
+#layer1 {position:absolute; top:100px; left:200px;}
+#layer2 {position:absolute; top:100px; left:300px;}
+#layer3 {position:absolute; top:100px; left:400px;}
+</style>
+<script type="text/javascript">
+function moveImage(layer)
+{
+var top=window.prompt("Enter the Top value: ");
+var left=window.prompt("Enter the Left value: ");
+document.getElementById(layer).style.top=top+'px';
+document.getElementById(layer).style.left=left+'px';
+}
+</script>
+</head>
+<body>
+<div id="layer1"><img src="D:\seema\2015-11-22\012.jpg"  height="100"  width="100" onclick="moveImage('layer1')"></img></div>
+<div id="layer2"><img src="D:\seema\2015-11-22\o12.jpg"  height="100"  width="100" onclick="moveImage('layer2')"></img></div>
+<div id="layer3"><img src="D:\seema\2015-11-22\012.jpg"  height="100"  width="100" onclick="moveImage('layer3')"></img></div>
+</body>
+</html>

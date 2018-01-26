@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Validating Form Elements</title>
+<script type="text/javascript">
+function validation()
+{
+var myarray=new Array();
+for(var i=0;i<document.myForm.length;i++)
+{
+if(document.myForm.elements[i].value.length==0)
+{
+myarray.push(document.myForm.elements[i].name);
+}
+}
+if(myarray.length!=0)
+{
+window.alert("The following feilds are empty in the form :" + myarray);
+}
+}
+</script>
+</head>
+<body>
+<form name="myForm">
+Name :<input type="text" name="name"/><br/><br/>
+Class: <input type="text" name="class"/><br/><br/>
+Email-id:<input type="text" name="email_feild"/><br/><br/>
+<input type="button" value="Validate Form" onclick="validation()"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>String Conversion</title>
+<script type="text/javascript">
+function upper()
+{
+document.getElementById("expression").value=document.getElementById("expression").value.toUpperCase();
+}
+function lower()
+{
+document.getElementById("expression").value=document.getElementById("expression").value.toLowerCase();
+}
+</script>
+</head>
+<body>
+<form>
+Enter any String: <input type="text" id="expression"/></br><br/>
+<input type="button" value="String to Upper case" onclick="upper()"/>
+<input type="button" value="String to Lower case" onclick="lower()"/>
+</form>
+</body>
+</html>

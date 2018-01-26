@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Sum of Natural Numbers</title>
+<script type="text/javascript">
+function numberSum()
+{
+var num=document.getElementById("number").value;
+var n=parseInt(num);
+var sum=(n*(n+1))/2;
+window.alert("Sum of "+num+ " numbers is :  "+sum);
+}
+</script>
+</head>
+<body>
+<form>
+Enter a Natural Number :<input type="text" id="number"/><br/><br/>
+<input type="button" value="Find Sum" onclick="numberSum()"/>
+</form>
+</body>
+</html>

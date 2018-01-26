@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Factorial of Natural Numbers</title>
+<script type="text/javascript">
+function findFact()
+{
+var num=document.getElementById("number").value;
+var n=parseInt(num);
+window.alert("The Factorial of" +n+" is :"+fact(n));
+}
+function fact(n)
+{
+if(n<2)
+{  
+return 1;
+}
+else
+{
+return (n*fact(n-1));
+}
+}
+</script>
+</head>
+<body>
+<form>
+Enter a Natural Number:<input type="text" id="number"/><br/><br/>
+<input type="button" value="Find Factorial" onclick="findFact()"/>
+</form>
+</body>
+</html>

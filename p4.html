@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Basic Animation</title>
+<style>
+#layer1 {position:absolute; top:100px; left:50px;}
+#layer2 {position:absolute; top:100px; left:200px;}
+#layer3 {position:absolute; top:100px; left:400px;}
+</style>
+<script type="text/javascript">
+function imageMove(layer)
+{
+var top=window.prompt("Enter the Top value :");
+var left=window.prompt("Enter the Left value: ");
+document.getElementById(layer).style.top=top+'px';
+document.getElementById(layer).style.left=left+'px';
+}
+</script>
+</head>
+<body>
+<div id="layer1"><img src="D:\seema\watsapp\WhatsApp Profile Photos\placement_cell.jpg" height="100" width="100" onclick=" imageMove('layer1')"></img></div> 
+<div id="layer2"><img src="D:\seema\watsapp\WhatsApp Profile Photos\placement_cell.jpg" height="100" width="100" onclick=" imageMove('layer2')"></img></div>
+<div id="layer3"><img src="D:\seema\watsapp\WhatsApp Profile Photos\placement_cell.jpg" height="100" width="100" onclick=" imageMove('layer3')"></img></div>
+</body>
+</html>
+                                          

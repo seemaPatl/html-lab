@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Restaurant Menu</title>
+<script type="text/javascript">
+function findcost()
+{
+var major=document.getElementById("major");
+var starters=document.getElementById("starters");
+var soft=document.getElementById("soft");
+var slectedItems="Item\t\t\tPrice"+"\n-----------------------------\n";
+var totalcost=0;
+for(var i=0;i<major.options.length;i++)
+{
+var option=major.options[i];
+if(option.selected==true)
+{
+var price=parseInt(option.value);
+totalcost=totalcost+price;
+slectedItems=slectedItems+option.text+"\t\t"+price+"\n";
+}
+}
+for(var i=0;i<starters.options.length;i++)
+{
+var option=starters.options[i];
+if(option.selected==true)
+{
+var price=parseInt(option.value);
+totalcost=totalcost+price;
+slectedItems=slectedItems+option.text+"\t\t"+price+"\n";
+}
+}
+var softdrinkIndex=soft.selectedIndex;
+if(softdrinkIndex!=-1)
+{
+var selectedSoftdrink=soft.options[soft.selectedIndex].text;
+var price=parseInt(soft.options[soft.selectedIndex].value);
+totalcost=totalcost+price;
+slectedItems=slectedItems+selectedSoftdrink+"\t\t"+price+"\n";
+}
+slectedItems=slectedItems+"\n\nTotal Cost\t\t"+totalcost;
+document.getElementById("ordereditems").value=slectedItems;
+}
+
+</script>
+</head>
+<body>
+<form name="menuForm">
+ <table border="10">
+ <tr><th colspan="2" align="center"><h2>Restuarnt Menu Details</h2></th></tr>
+ <tr><td>Major Dishes:</td><td><select id="major" size="3" multiple="multiple">
+	<option value="100">Vegetarian Pulav</option>
+	<option value="250">Biryani</option>
+	<option value="50">Roti with curry</option>
+</select>
+</td></tr>
+<tr><td>Starters</td><td><select id="starters" size="3" multiple="multiple">
+	<option value="80">Gobi Manchurian</option>
+	<option value="40">Veg Clear Soup</option>
+	<option value="30">Masala Papad</option>
+</selected>
+</td></tr>
+<tr><td>Soft Drinks</td><td><select id="soft" size="3">
+	<option value="20">Pepsi</option>
+	<option value="20">Coke</option>
+	<option value="30">Lime Soda</option>
+</select>
+</td></tr>
+<tr><td colspan="2" align="center">
+<textarea id="ordereditems" rows="10" cols="40"></textarea></td></tr>
+<tr><td><input type="button" value="Find Total Cost" onclick="findcost()"/></td>
+<td><input type="reset" value="Clear" /></td></tr>
+</table>
+</form>
+</body>
+</html>
